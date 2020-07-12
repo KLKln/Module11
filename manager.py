@@ -31,7 +31,7 @@ class Manager(Person, Employee):
         # department: string
 
     def display(self):
-        return str(self.first_name + self.last_name + self.start_date, self.salary)
+        return str(self.first_name + self.last_name + self.address + self.phone, self.start_date + self.start_date, self.salary)
 
         pass
 
