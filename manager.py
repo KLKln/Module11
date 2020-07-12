@@ -2,8 +2,8 @@
 Program: employee.py
 Author: Kelly Klein
 Last date modified: 7/11/2020
-This program will create a class called employee and sub classes salaried_employee
-    and hourly_employee
+This program will create a class called managers and include a display method to
+    iterate through a list of employees under them
 """
 import datetime
 
