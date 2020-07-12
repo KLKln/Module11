@@ -13,8 +13,8 @@ from employee1 import Employee
 
 class Manager(Person, Employee):
     def __init__(self, lname, fname, address, phone, start_date, salary, department):
-        super().__init__(self, lname, fname, address, phone, start_date, salary)
-        super().__init__(self, addy='')
+        super().__init__(self, lname, fname)
+        super().__init__(self, address, phone, start_date, salary)
         self.last_name = lname
         # last_name: string
         self.first_name = fname
