@@ -1,7 +1,7 @@
 """
-Program: employee.py
+Program: manager.py.py
 Author: Kelly Klein
-Last date modified: 7/11/2020
+Last date modified: 7/14/2020
 This program will create a class called managers and include a display method to
     iterate through a list of employees under them
 """
@@ -12,9 +12,9 @@ from employee1 import Employee
 
 
 class Manager(Person, Employee):
-    def __init__(self, lname, fname, address, phone, start_date, salary, department):
-        super().__init__(self, lname, fname)
-        super().__init__(self, address, phone, start_date, salary)
+    def __init__(self, lname, fname, address, phone, start_date, salary, department='HR'):
+        Person.__init__(self, lname, fname, address)
+        Employee.__init__(self, lname, fname, address, phone, start_date, salary)
         self.last_name = lname
         # last_name: string
         self.first_name = fname
@@ -30,20 +30,31 @@ class Manager(Person, Employee):
         self.department = department
         # department: string
 
+    def __str__(self):
+            str(self.first_name) + str(self.last_name) + str(self.address) + str(self.phone) + str(self.start_date) + str(self.salary) + str(department)
+
+    def __repr__(self):
+            repr(self.first_name + self.last_name + self.address + self.phone + self.start_date + self.salary + self.department)
+
     def display(self):
-        return str(self.first_name + self.last_name + self.address + self.phone, self.start_date + self.start_date, self.salary)
+        return str(self.first_name) + str(self.last_name) + str(self.address) + str(self.phone) + str(self.start_date) + str(self.salary)
 
 
+def display_employees(self):
+    for i in list_of_dr:
+        print(i)
 
 
 if __name__ == '__main__':
-    k_klein = Manager('Klein', 'Kelly', '587 newb dr.\n Coralville, Iowa', '777-888-9999', str(datetime.datetime.now()),
-                      40000, 'Grocery')
+    k_klein = Manager('Klein\n', 'Kelly ', '587 newb dr.\nCoralville, Iowa\n', '777-888-9999\n', str(datetime.datetime.now()), 40000)
     print(k_klein.display())
-    direct_report1 = Employee('Klein', 'Kelly', '000 blank st.\n Coralville, Iowa', '444-555-6666', True,
-                              str(datetime.datetime.now()), 40000.00)
-    # print(direct_report1)
-    direct_report2 = Employee('Klein', 'Kelly', '000 blank st.\n Coralville, Iowa', '444-555-6666', True,
-                              str(datetime.datetime.now()), 40000.00)
+    direct_report1 = Employee('Joe\n', 'GI ', '909 patriot st.\nNowhere, USA\n', '444-555-6666\n', str(datetime.datetime.now()), 56000.00)
+    #print(direct_report1)
+    direct_report2 = Employee('Commander\n', 'Cobra ', '1313 bad guy ave.\nDesolation, Iowa\n', '333-111-8888\n', str(datetime.datetime.now()), 6000000.00)
     # print(direct_report2)
     list_of_dr = [direct_report1, direct_report2]
+    display_employees(list_of_dr)
+    del k_klein
+    del direct_report2
+    del direct_report1
+    del list_of_dr

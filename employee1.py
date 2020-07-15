@@ -10,7 +10,7 @@ import datetime
 
 
 class Employee:
-    def __init__(self, lname, fname, address, phone, salaried, start_date, salary):
+    def __init__(self, lname, fname, address, phone, start_date, salary):
 
         """
         use reST style.
@@ -18,7 +18,6 @@ class Employee:
         :param first_name: employee's first name
         :param address: employees address
         :param phone_number: employee's phone number
-        :param salaried: boolean salaried or not
         :param start_date: date employee started
         :param salary: double to indicate salary
         :return:
@@ -31,8 +30,6 @@ class Employee:
         #address: string
         self.phone = phone
         #phone_number: string
-        self.salaried = salaried
-        #salaried: boolean
         self.start_date = start_date
         #start_date: datetime
         self.salary = salary
@@ -45,7 +42,6 @@ class Employee:
         :param first_name: employee's first name
         :param address: employees address
         :param phone_number: employee's phone number
-        :param salaried: whether employee is salaried or not
         :param start_date: date employee started working
         :param salary: employee's yearly salary or hourly wage
         :return:
@@ -59,10 +55,10 @@ class Employee:
             print('Salaried Employee:', self.salary)
 
     def __str__(self):
-        str(self.first_name + self.last_name + self.address + self.phone + self.salaried, self.start_date, self.salary)
+        str(self.first_name + self.last_name + self.address + self.phone + self.start_date, self.salary)
 
     def __repr__(self):
-        repr(self.first_name + self.last_name + self.address + self.phone + self.salaried + self.start_date + self.salary)
+        repr(self.first_name + self.last_name + self.address + self.phone + self.start_date + self.salary)
 
 
 if __name__ == '__main__':
